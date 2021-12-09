@@ -12,4 +12,3 @@ const CreateProjectButton = () => {
 };
 
 export default CreateProjectButton;
-
