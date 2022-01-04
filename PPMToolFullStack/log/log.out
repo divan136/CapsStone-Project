@@ -1,0 +1,12 @@
+2022-01-04 15:17:35,444 0    [http-nio-8080-exec-1] INFO  UserService  - this does work
+2022-01-04 15:17:35,501 57   [http-nio-8080-exec-1] ERROR UserService  - not found
+2022-01-04 15:17:35,504 60   [http-nio-8080-exec-1] DEBUG UserService  - texas we have a problem
+2022-01-04 15:17:50,718 15274 [http-nio-8080-exec-2] INFO  UserService  - this does work
+2022-01-04 15:17:50,722 15278 [http-nio-8080-exec-2] ERROR UserService  - not found
+2022-01-04 15:17:50,724 15280 [http-nio-8080-exec-2] DEBUG UserService  - texas we have a problem
+2022-01-04 15:25:08,733 0    [http-nio-8080-exec-1] INFO  UserService  - this does work
+2022-01-04 15:25:08,786 53   [http-nio-8080-exec-1] ERROR UserService  - not found
+2022-01-04 15:25:08,788 55   [http-nio-8080-exec-1] DEBUG UserService  - texas we have a problem
+2022-01-04 15:25:58,353 0    [http-nio-8080-exec-1] INFO  UserService  - this does work
+2022-01-04 15:25:58,394 41   [http-nio-8080-exec-1] ERROR UserService  - not found
+2022-01-04 15:25:58,396 43   [http-nio-8080-exec-1] DEBUG UserService  - texas we have a problem

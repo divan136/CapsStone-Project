@@ -8,11 +8,12 @@ import io.agileintelligence.ppmtool.exceptions.ProjectNotFoundException;
 import io.agileintelligence.ppmtool.repositories.BacklogRepository;
 import io.agileintelligence.ppmtool.repositories.ProjectRepository;
 import io.agileintelligence.ppmtool.repositories.UserRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProjectService {
+public class ProjectService {static Logger log=Logger.getLogger(ProjectService.class.getName());
 
     @Autowired
     private ProjectRepository projectRepository;
@@ -28,6 +29,7 @@ public class ProjectService {
         if(project.getId() != null){
             Project existingProject = projectRepository.findByProjectIdentifier(project.getProjectIdentifier());
             if(existingProject !=null &&(!existingProject.getProjectLeader().equals(username))){
+
                 throw new ProjectNotFoundException("Project not found in your account");
             }else if(existingProject == null){
                 throw new ProjectNotFoundException("Project with ID: '"+project.getProjectIdentifier()+"' cannot be updated because it doesn't exist");
@@ -68,6 +70,10 @@ public class ProjectService {
         Project project = projectRepository.findByProjectIdentifier(projectId.toUpperCase());
 
         if(project == null){
+
+            log.info("non existing project");
+            log.error(" yes its not found");
+
             throw new ProjectIdException("Project ID '"+projectId+"' does not exist");
 
         }
